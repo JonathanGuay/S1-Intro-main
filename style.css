@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color:deeppink;
 }
 img {
     width: 100%;
@@ -40,7 +39,6 @@ body{
 .nav-item{
     font-size: 0.8rem;
     padding: 0.5rem;
-
 }
 .navbar-brand{
     font-size: 1.1rem;
@@ -60,7 +58,19 @@ h3{
     font-weight: 500;
 }
 button{
-    font-size: 4rem;
+    padding: 0.3rem 0;
+    width: 35rem;
+    margin: 0.2rem 0;
+    border: solid green 1px;
+    background-color: white;
+}
+.bouton2 bouton{
+    width: 10rem;
+}
+input{
+    width: 35rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0;
 }
 .boite{
     display: flex;
