@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color:deeppink;
 }
 img {
     width: 100%;
@@ -20,7 +19,7 @@ body{
 }
 .container{
     max-width: 1163px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 2rem;
 }
 .nav{
@@ -60,7 +59,21 @@ h3{
     font-weight: 500;
 }
 button{
-    font-size: 4rem;
+    width: 35rem;
+    padding: 0.2rem 0;
+    margin: 0.4rem 0 0.1rem;
+    border: green 1px solid;
+    background-color: white;
+}
+.petit{
+    width: 10rem;
+}
+petitbouton{
+    margin-left: 10rem;
+}
+input{
+    width: 35rem;
+    padding: 0.2rem 0;
 }
 .boite{
     display: flex;
@@ -72,4 +85,7 @@ button{
     border: solid 1px gray;
     border-bottom: 0px;
     padding: 0 1rem;
+}
+.borderplus{
+    border-bottom: solid 1px gray;
 }
