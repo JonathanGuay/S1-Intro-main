@@ -1,21 +1,27 @@
 function ajouter(){
-    var item = document.getElementById("desc").value;
-
-    let nouveauP = document.createElement("p");              // créer une balise p // mettre un let
-    nouveauP.innerText = item;                                      // Écrire dans le paragraphe
-    document.getElementById("maListe").append(nouveauP);  // Ajouter le paragraphe à la liste
-
-
+    var item = document.getElementById("desc").value;         // ajouter le texte
+    var valeur = document.getElementById("valeur").value;     // ajouter le prix
+    let nouveauP = document.createElement("p");              // créer une balise p
+    let nouveauSpan = document.createElement("span");
+    nouveauP.innerText = item + " : " + valeur + "$";                // Écrire dans le paragraphe
+    nouveauSpan.innerText = valeur + "$";
+    document.getElementById("maListe").append(nouveauP);
+    nouveauSpan.append(nouveauSpan);   // mettre le span a la fin
 
     // alert("L'item est bien ajouté"); //pop-up
+
+    // mettre le total a jour
+    let ancienPrix = document.getElementById("total").innerText;
+    let nouveauPrix = +ancienPrix + +valeur;                              // +variable : convertir en numérique
+    document.getElementById("total").innerText = nouveauPrix;
+
+    //nouveauInput = document.createElement("input");
+    //nouveauInput.setAttribute("value", item);
+    //nouveauInput.setAttribute("hidden", true);
+    //nouveauInput.setAttribute("name", "item "+compteur);
+    //compteur++;
+
 }
-
-
-nouveauInput = document.createElement("input");
-nouveauInput =
-
-
-
 
 console.log("Bonjour");
 

@@ -25,18 +25,21 @@
         <div class="boite">
         <div class="boite1">
     <h4 class="mb-3">Ajouter un item à la liste</h4>
+
     <div class="mb-4">
       <p>Description :</p>
       <input type="text" id="desc" name="essai" required></input>
     </div>
+
     <div class="mb-4">
       <span>Valeur estimée ($) :</span><br>
-      <input type="number" id="valeur">
+      <input type="number" id="valeur" required></input>
     </div>
+
     <div class="d-grid gap-2">
-      <button onclick="ajouter()">Ajouter</button>
+      <button onclick="ajouter()" onclick="ajouterNum()">Ajouter</button>
       <br>
-      <button onclick="ajouter()">Annuler</button>
+      <button>Annuler</button>
     </div>
     </div>
 
@@ -47,7 +50,7 @@
       <p class="liste">Une tuque des fêtes :<span>42$</span></p>
       <p class="liste borderplus">Un chandail laid des fêtes :<span>25$</span></p>
     </div>
-      <p>Total: 81$</p>
+      <p >Total: <span id="total">81</span>$</p>
 
     <p class="col-form-label h3">Destinataire:</p>
     <input id="email" type="text">

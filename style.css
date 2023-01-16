@@ -89,3 +89,7 @@ input{
 .list p:last-child{
     border-bottom: solid 1px gray;
 }
+.list span{
+    padding-left: 15rem;
+    border-bottom: aquamarine 3px solid;
+}
