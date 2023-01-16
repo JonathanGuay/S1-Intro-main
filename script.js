@@ -3,6 +3,7 @@ function ajouter(){
     document.getElementById("maListe").append(item);
     alert("L'item est bien ajouté"); //pop-up
 }
+
 console.log("Bonjour");
 
 
