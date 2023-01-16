@@ -3,17 +3,18 @@ function ajouter(){
     var valeur = document.getElementById("valeur").value;     // ajouter le prix
     let nouveauP = document.createElement("p");              // créer une balise p
     let nouveauSpan = document.createElement("span");
-    nouveauP.innerText = item + " : " + valeur + "$";                // Écrire dans le paragraphe
+    nouveauP.innerText = item + " : ";                // Écrire dans le paragraphe
     nouveauSpan.innerText = valeur + "$";
     document.getElementById("maListe").append(nouveauP);
-    nouveauSpan.append(nouveauSpan);   // mettre le span a la fin
+    nouveauP.append(nouveauSpan);   // mettre le span a la fin
 
     // alert("L'item est bien ajouté"); //pop-up
 
     // mettre le total a jour
-    let ancienPrix = document.getElementById("total").innerText;
+    let ancienPrix = document.getElementById("tot").innerText;
     let nouveauPrix = +ancienPrix + +valeur;                              // +variable : convertir en numérique
-    document.getElementById("total").innerText = nouveauPrix;
+    document.getElementById("tot").innerText = nouveauPrix;
+
 
     //nouveauInput = document.createElement("input");
     //nouveauInput.setAttribute("value", item);
