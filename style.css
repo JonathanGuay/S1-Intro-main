@@ -81,11 +81,11 @@ input{
 .boite1{
     margin-right: 7rem;
 }
-.liste{
+.list p{
     border: solid 1px gray;
     border-bottom: 0px;
     padding: 0 1rem;
 }
-.borderplus{
+.list p:last-child{
     border-bottom: solid 1px gray;
 }
