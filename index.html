@@ -26,47 +26,51 @@
     <p class="text-muted ms-1 gris">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                     ami.e.s.</p>
 
-
     <form method="post">
       <div class="boite">
         <div class="boite1">
 
-    <h4 class="mb-3">Ajouter un item à la liste</h4>
+          <h4 class="mb-3">Ajouter un item à la liste</h4>
 
-    <div class="mb-4">
-      <p>Description :</p>
-      <input type="text" id="desc" name="essai" required></input>
-    </div> <!--mb-4-->
+            <div class="mb-4">
+              <p>Description :</p>
+              <input type="text" id="desc" name="essai" required></input>
+            </div> <!--mb-4-->
 
-    <div class="mb-4">
-      <span>Valeur estimée ($) :</span><br>
-      <input type="number" id="valeur">
-    </div><!--mb-4-->
+            <div class="mb-4">
+              <span>Valeur estimée ($) :</span><br>
+              <input type="number" id="valeur">
+            </div><!--mb-4-->
 
-    <div class="d-grid gap-2">
-      <input type="button" value="Ajouter" onclick="ajouter()"/>
-      <br>
-      <input type="reset" value="Annuler"/>
-    </div><!--d-grid gab-2-->
-    </div><!--boite1-->
+            <div class="d-grid gap-2">
+              <input type="button" value="Ajouter" onclick="ajouter()"/>
+              <br>
+              <input type="reset" value="Annuler"/>
+            </div><!--d-grid gab-2-->
+          </div><!--boite1-->
 
-    <div class="boite2">
-    <h3 >Ma liste</h3>
-    <div class="list" id="maListe"> <!-- mettre un id lié au java-->
-      <p class="liste">Des bas rigolos des fêtes : <span>14$</span></p>
-      <p class="liste">Une tuque des fêtes :<span>42$</span></p>
-      <p class="liste">Un chandail laid des fêtes :<span>25$</span></p>
-    </div> <!--list-->
-      <p>Total: <span id="tot">80</span>$</p>
-
-    <p class="col-form-label h3">Destinataire:</p>
-    <input id="email" type="email" required onblur="ajouterEmail()"/>
-    <div class="petitbouton">
-      <input class="petit" type="submit" value="Confirmer et envoyer"/>
-      <input class="petit" onclick="effacer()" type="submit" value="Recommencer"/>
-    </div><!--petit bouton-->
-    </div><!--boite2-->
-    </div> <!--boite-->
-  </form>
+          <div class="boite2">
+            <h3 >Ma liste</h3>
+            <div class="list" id="maListe"> <!-- mettre un id lié au java-->
+              <p class="liste">Des bas rigolos des fêtes : <span>14$</span></p>
+              <p class="liste">Une tuque des fêtes :<span>42$</span></p>
+              <p class="liste">Un chandail laid des fêtes :<span>25$</span></p>
+            </div> <!--list-->
+              <p>Total: <span id="tot">80</span>$</p>
+            <div class="mb-4">
+              <p class="col-form-label h3">Destinataire:</p>
+              <input id="email" type="email" required onblur="ajouterEmail()"/>
+            </div>
+            <div class="petitbouton">
+              <input class="petit" type="submit" value="Confirmer et envoyer"/>
+              <input class="petit" onclick="effacer()" type="submit" value="Recommencer"/>
+            </div><!--petit bouton-->
+            <!--Préparer attribut du couriel avec des input hidden-->
+            <input hidden name="Item_1" value="Crocs des fêtes">
+            <input hidden name="Item_2" value="Une tuque des fêtes">
+            <input hidden name="Item_3" value="Un chandail laid des fêtes">
+          </div><!--boite2-->
+      </div> <!--boite-->
+    </form>
   </body>
 </html>

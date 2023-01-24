@@ -96,5 +96,12 @@ input{
 }
 input{
     margin-top: 10px;
-    color: green;
+    color: black;
+    border: solid 1px green;
+}
+input:hover, input:active{
+    background-color: green;
+}
+.mb-4 input:hover, .mb-4 input:active{
+    background-color: #f8f9fa;
 }

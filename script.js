@@ -1,3 +1,4 @@
+compteur=4; // variable globale
 function ajouter(){
     var item = document.getElementById("desc").value;         // ajouter le texte
     var valeur = document.getElementById("valeur").value;     // ajouter le prix
@@ -8,19 +9,18 @@ function ajouter(){
     document.getElementById("maListe").append(nouveauP);
     nouveauP.append(nouveauSpan);   // mettre le span a la fin
 
-    // alert("L'item est bien ajouté"); //pop-up
-
     // mettre le total a jour
     let ancienPrix = document.getElementById("tot").innerText;
     let nouveauPrix = +ancienPrix + +valeur;                              // +variable : convertir en numérique
     document.getElementById("tot").innerText = nouveauPrix;
 
-
-    //nouveauInput = document.createElement("input");
-    //nouveauInput.setAttribute("value", item);
-    //nouveauInput.setAttribute("hidden", true);
-    //nouveauInput.setAttribute("name", "item "+compteur);
-    //compteur++;
+    // Créer des nouveaux input hidden dans le formulaire pour envoyer par courriel
+    nouveauInput = document.createElement("input");
+    nouveauInput.setAttribute("hidden", true);
+    nouveauInput.setAttribute("name", "item "+compteur);
+    nouveauInput.setAttribute("value", item);
+    document.forms[0].append(nouveauInput);
+    compteur++;
 }
 function ajouterEmail(){
     var email = document.getElementById("email").value;
