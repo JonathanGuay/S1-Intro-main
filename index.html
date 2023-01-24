@@ -8,6 +8,9 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
   </head>
+
+
+
   <body>
   <div class="flex nav">
     <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
@@ -17,31 +20,35 @@
       <p class="nav-item">
         <a class="nav-link gris" aria-current="page" href="#">Listes de mes ami.e.s</a>
       </p>
-    </div>
+    </div> <!--nav-->
 
     <h3>Ma liste de cadeaux interactive Jo</h3>
     <p class="text-muted ms-1 gris">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                     ami.e.s.</p>
-        <div class="boite">
+
+
+    <form method="post">
+      <div class="boite">
         <div class="boite1">
+
     <h4 class="mb-3">Ajouter un item à la liste</h4>
 
     <div class="mb-4">
       <p>Description :</p>
       <input type="text" id="desc" name="essai" required></input>
-    </div>
+    </div> <!--mb-4-->
 
     <div class="mb-4">
       <span>Valeur estimée ($) :</span><br>
       <input type="number" id="valeur">
-    </div>
+    </div><!--mb-4-->
 
     <div class="d-grid gap-2">
-      <button onclick="ajouter()">Ajouter</button>
+      <input type="button" value="Ajouter" onclick="ajouter()"/>
       <br>
-      <button>Annuler</button>
-    </div>
-    </div>
+      <input type="reset" value="Annuler"/>
+    </div><!--d-grid gab-2-->
+    </div><!--boite1-->
 
     <div class="boite2">
     <h3 >Ma liste</h3>
@@ -49,16 +56,17 @@
       <p class="liste">Des bas rigolos des fêtes : <span>14$</span></p>
       <p class="liste">Une tuque des fêtes :<span>42$</span></p>
       <p class="liste">Un chandail laid des fêtes :<span>25$</span></p>
-    </div>
+    </div> <!--list-->
       <p>Total: <span id="tot">80</span>$</p>
 
     <p class="col-form-label h3">Destinataire:</p>
-    <input id="email" type="text">
+    <input id="email" type="email" required onblur="ajouterEmail()"/>
     <div class="petitbouton">
-      <button class="petit">Confirmer et envoyer</button>
-      <button class="petit">Recommencer</button>
-    </div>
-    </div>
-    </div>
+      <input class="petit" type="submit" value="Confirmer et envoyer"/>
+      <input class="petit" onclick="effacer()" type="submit" value="Recommencer"/>
+    </div><!--petit bouton-->
+    </div><!--boite2-->
+    </div> <!--boite-->
+  </form>
   </body>
 </html>

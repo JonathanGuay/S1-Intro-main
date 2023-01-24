@@ -93,5 +93,8 @@ input{
     text-align: end;
     justify-content: flex-end;
     border-bottom: aquamarine 3px solid;
-
+}
+input{
+    margin-top: 10px;
+    color: green;
 }

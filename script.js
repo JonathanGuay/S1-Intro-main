@@ -21,7 +21,13 @@ function ajouter(){
     //nouveauInput.setAttribute("hidden", true);
     //nouveauInput.setAttribute("name", "item "+compteur);
     //compteur++;
-
+}
+function ajouterEmail(){
+    var email = document.getElementById("email").value;
+    document.forms[0].action = "mailto:"+email;
+}
+function effacer(){
+document.forms[0].action = "";
 }
 
 console.log("Bonjour");
